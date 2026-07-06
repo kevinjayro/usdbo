@@ -1,5 +1,7 @@
+import ExchangeRateCard from './components/ExchangeRateCard';
+
 function App() {
-  return null;
+  return <ExchangeRateCard />;
 }
 
 export default App;
