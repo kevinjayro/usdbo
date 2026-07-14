@@ -1,5 +1,6 @@
 import { useExchangeRate } from '../../hooks/useExchangeRate';
 import { formatDate } from '../../utils/formatDate';
+import CurrencyCalculator from '../CurrencyCalculator/CurrencyCalculator';
 import RateCard from '../RateCard/RateCard';
 import styles from './ExchangeRateCard.module.css';
 
@@ -27,12 +28,18 @@ export default function ExchangeRateCard() {
       </header>
 
       <main className={styles.content}>
-        <RateCard
-          title="Cotización del dólar estadounidense"
-          symbol="USD"
-          value={data.usdBob.toFixed(2)}
-          description="Valor referencial en bolivianos (BOB) por 1 dólar estadounidense."
-        />
+        <div>
+          <RateCard
+            title="Cotización del dólar estadounidense"
+            symbol="USD"
+            value={data.usdBob.toFixed(2)}
+            description="Valor referencial en bolivianos (BOB) por 1 dólar estadounidense."
+          />
+        </div>
+
+        <div>
+          <CurrencyCalculator exchangeRate={data.usdBob} />
+        </div>
       </main>
 
       <footer className={styles.footer}>
