@@ -81,3 +81,33 @@
 .footer a:hover {
   text-decoration: underline;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle,
+  .updated {
+    font-size: 0.875rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+
+    max-width: 100%;
+
+    padding: 1rem;
+
+    gap: 1rem;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+}
