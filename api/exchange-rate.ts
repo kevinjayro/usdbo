@@ -1,7 +1,26 @@
 export default async function handler(): Promise<Response> {
-  const response = await fetch('https://api.factura.bo/ExchangeRate');
+  try {
+    const response = await fetch('https://api.factura.bo/ExchangeRate');
 
-  const data = await response.json();
+    const data = await response.json();
 
-  return Response.json(data);
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  } catch {
+    return new Response(
+      JSON.stringify({
+        error: 'Unable to fetch exchange rate',
+      }),
+      {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    );
+  }
 }
