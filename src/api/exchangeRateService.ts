@@ -3,7 +3,7 @@ import type {
   ExchangeRateApiResponse,
 } from '../types/exchangeRate';
 
-const API_URL = '/api/ExchangeRate';
+const API_URL = '/api/exchange-rate';
 
 export async function fetchExchangeRate(): Promise<ExchangeRate> {
   const response = await fetch(API_URL);
