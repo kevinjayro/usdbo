@@ -1,26 +1,15 @@
-export default async function handler(): Promise<Response> {
+import type { VercelResponse } from '@vercel/node';
+
+export default async function handler(_req: Request, res: VercelResponse) {
   try {
     const response = await fetch('https://api.factura.bo/ExchangeRate');
 
     const data = await response.json();
 
-    return new Response(JSON.stringify(data), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    res.status(200).json(data);
   } catch {
-    return new Response(
-      JSON.stringify({
-        error: 'Unable to fetch exchange rate',
-      }),
-      {
-        status: 500,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      },
-    );
+    res.status(500).json({
+      error: 'Unable to fetch exchange rate',
+    });
   }
 }
