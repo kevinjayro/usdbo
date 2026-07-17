@@ -3,9 +3,10 @@ import styles from './RateCard.module.css';
 interface RateCardProps {
   title: string;
   symbol: string;
-  value: number | string;
+  value: string;
   description: string;
 }
+
 export default function RateCard({
   title,
   symbol,
@@ -21,7 +22,6 @@ export default function RateCard({
       <div className={styles.body}>
         <div className={styles.valueContainer}>
           <span className={styles.symbol}>{symbol}</span>
-
           <span className={styles.value}>Bs {value}</span>
         </div>
       </div>
