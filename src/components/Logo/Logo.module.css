@@ -1,0 +1,46 @@
+.logo {
+  width: 260px;
+  height: 65px;
+  flex-shrink: 0;
+}
+
+.logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.usd {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-size: 96px;
+  font-weight: 850;
+  fill: #0f172a;
+  letter-spacing: -3px;
+}
+
+.bo {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-size: 96px;
+  font-weight: 300;
+  fill: #2563eb;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 220px;
+    height: 55px;
+  }
+}

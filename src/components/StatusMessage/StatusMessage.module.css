@@ -1,0 +1,76 @@
+.statusMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: #2563eb;
+}
+
+.iconSpin {
+  animation: spin 1s linear infinite;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo svg {
+  width: 48px;
+  height: 48px;
+}
+
+.description {
+  margin: 0;
+  max-width: 320px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.statusMessage--loading .icon {
+  color: #2563eb;
+}
+
+.statusMessage--error .icon {
+  color: #dc2626;
+}
+
+.statusMessage--noData .icon {
+  color: #6b7280;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

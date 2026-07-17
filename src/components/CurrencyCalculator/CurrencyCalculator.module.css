@@ -1,13 +1,9 @@
 .container {
   background: #ffffff;
-
   border-radius: 16px;
   border: 1px solid #e5e7eb;
-
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-
   overflow: hidden;
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -15,119 +11,87 @@
 
 .container:hover {
   transform: translateY(-3px);
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header {
   padding: 1.25rem 1.5rem;
-
   border-bottom: 1px solid #e5e7eb;
 }
 
 .title {
   margin: 0;
-
   font-size: 1rem;
   font-weight: 600;
-
   color: #374151;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-
   gap: 1.5rem;
-
   padding: 1.5rem;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-
   gap: 0.5rem;
 }
 
 .label {
   font-size: 0.875rem;
   font-weight: 600;
-
   color: #374151;
 }
 
 .input {
   width: 100%;
-
   padding: 0.875rem 1rem;
-
   border: 1px solid #d1d5db;
   border-radius: 12px;
-
   font-size: 1rem;
-
   color: #111827;
-
   background: #ffffff;
 }
 
 .input:focus {
   outline: none;
-
   border-color: #2563eb;
 }
 
 .currencySelector {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 1rem;
 }
 
 .currency {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   min-width: 90px;
   height: 48px;
-
   border-radius: 12px;
-
   border: 1px solid #e5e7eb;
-
   font-size: 1rem;
   font-weight: 700;
-
   color: #2563eb;
-
   background: #ffffff;
 }
 
 .swapButton {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   width: 44px;
   height: 44px;
-
   border: none;
   border-radius: 50%;
-
   background: #2563eb;
-
   color: #ffffff;
-
-  font-size: 1.25rem;
-
   cursor: pointer;
-
   transition:
     transform 0.2s ease,
     background 0.2s ease;
@@ -135,38 +99,34 @@
 
 .swapButton:hover {
   background: #1d4ed8;
-
-  transform: rotate(180deg);
 }
 
 .swapButton:active {
   transform: scale(0.95);
 }
 
+.swapButton:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
 .footer {
   padding: 1rem 1.5rem;
-
   border-top: 1px solid #e5e7eb;
 }
 
 .resultTitle {
   margin: 0 0 0.75rem;
-
   font-size: 0.875rem;
   font-weight: 600;
-
   color: #374151;
 }
 
 .resultValue {
   margin: 0;
-
   font-size: 1.5rem;
   font-weight: 700;
-
   letter-spacing: -0.02em;
-
   color: #111827;
-
   font-variant-numeric: tabular-nums;
 }
